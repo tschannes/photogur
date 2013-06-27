@@ -5,6 +5,8 @@ application up and running.
 
 Things you may want to cover:
 
+* This app is deployed at "http://warm-bastion-4959.herokuapp.com"
+
 * Ruby version
 
 * System dependencies
