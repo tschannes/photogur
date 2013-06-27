@@ -11,22 +11,33 @@
  *= require_self
  *= require_tree .
  */
- 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 body{
 	background-color:black;
 	width:100%;
-	margin-left:2%;
 	color:grey;
 	font-family: 'Roboto', sans-serif;
 	font-weight:100;
+	width:90%;
+	margin:auto;
 }
 .front{
-	width:46%;
+	width:47.5%;
 	height:auto;
 	float:left;
 	margin-right:2%;
 	opacity:0.5;
+	transition: all 1s;
+	-webkit-transition: all 1s; /* Safari */
+
 }
+.front:nth-child(even){
+	margin-right:2%;
+}
+.
 .back{
 	width:96%;
 	height:auto;
@@ -43,8 +54,9 @@ legend{
 	position:relative;
 	top:100px;
 	left:30px;
+	overflow:hidden;
 }
-a{
+a,legend {
 	color:grey;
 	text-decoration:none;
 	text-align:center;
@@ -57,11 +69,16 @@ a:hover{
 	-webkit-transition: all 1s; /* Safari */
 }
 h1{
-	text-align:center;
-	text-transform:lowercase;
+	/*text-align:center;
+	text-transform:lowercase;*/
+	display:none;
 }
 nav{
-	position:fixed;
-	top:30px;
-	left:30px;
+	margin-top:20px;
+	margin-bottom;-20px;
+}
+@media (max-width: 800px) {
+  .front {
+    width:100%;
+  }
 }

@@ -15,9 +15,18 @@
 //= require turbolinks
 //= require_tree .
 $(document).ready(function() {
-	
+
+	$(function() {
+		$('img').hide();
+	    $('img').each(function(index) {
+	        setTimeout(function(el) {
+	            el.fadeIn();
+	        }, index * 750, $(this));
+	    });
+	});
+
 	$("img").mouseenter(function() {
-		$(this).parents().children('legend').css("opacity","1");
+		$(this).parents().children('legend').css("opacity", "1");
 	});
 	$("img").mouseout(function() {
 		$(this).parents().children('legend').css("opacity", "0");
