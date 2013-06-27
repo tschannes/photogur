@@ -28,7 +28,6 @@ body{
 	width:47.5%;
 	height:auto;
 	float:left;
-	margin-right:2%;
 	opacity:0.5;
 	transition: all 1s;
 	-webkit-transition: all 1s; /* Safari */
@@ -71,11 +70,11 @@ h1{
 	display:none;
 }
 nav{
-	margin-top:20px;
-	margin-bottom:-20px;
+	margin-top:40px;
 }
 @media (max-width: 800px) {
   .front {
     width:100%;
+    margin:none;
   }
 }
