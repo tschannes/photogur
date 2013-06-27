@@ -68,13 +68,11 @@ a:hover{
 	-webkit-transition: all 1s; /* Safari */
 }
 h1{
-	/*text-align:center;
-	text-transform:lowercase;*/
 	display:none;
 }
 nav{
 	margin-top:20px;
-	margin-bottom;-20px;
+	margin-bottom:-20px;
 }
 @media (max-width: 800px) {
   .front {
