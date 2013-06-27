@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function() {
+	
+	$("img").mouseenter(function() {
+		$(this).parents().children('legend').css("opacity","1");
+	});
+	$("img").mouseout(function() {
+		$(this).parents().children('legend').css("opacity", "0");
+	});
+})
