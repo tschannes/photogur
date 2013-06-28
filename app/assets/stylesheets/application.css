@@ -32,10 +32,12 @@ body{
 	opacity:0.5;
 	transition: all 1s;
 	-webkit-transition: all 1s; /* Safari */
-
 }
 .front:nth-child(even){
 	margin-right:2%;
+}
+.front:last-child{
+	padding-bottom:30px;
 }
 .back{
 	width:96%;
@@ -72,6 +74,11 @@ h1{
 }
 nav{
 	margin-top:40px;
+}
+footer{
+	padding-top:30px;
+	padding-bottom:30px;
+	clear:both;
 }
 @media (max-width: 800px) {
   .front {

@@ -17,18 +17,19 @@
 $(document).ready(function() {
 
 	$(function() {
-		$('img').hide();
+		$('img, footer').hide();
 	    $('img').each(function(index) {
 	        setTimeout(function(el) {
 	            el.fadeIn();
 	        }, index * 750, $(this));
 	    });
+	    $('footer').fadeIn(5000);
 	});
 
-	$("img").mouseenter(function() {
+	$("img, legend").mouseenter(function() {
 		$(this).parents().children('legend').css("opacity", "1");
 	});
-	$("img").mouseout(function() {
+	$("img, legend").mouseout(function() {
 		$(this).parents().children('legend').css("opacity", "0");
 	});
 })
