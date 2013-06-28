@@ -26,7 +26,8 @@ body{
 }
 .front{
 	width:47.5%;
-	height:auto;
+	max-height:300px;
+	overflow:hidden;
 	float:left;
 	opacity:0.5;
 	transition: all 1s;
