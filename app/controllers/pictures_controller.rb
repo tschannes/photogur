@@ -12,10 +12,9 @@ class PicturesController < ApplicationController
 	  # Make the variable @picture a new picture with the given params
 	  params.permit!
 	  @picture = Picture.new(params[:picture])
-	 # && if params[:picture].empty? == false
-	  if @picture[:url].blank? || @picture[:artist].blank? || @picture[:title].blank?
-	  	render :new
-	  elsif @picture.save  
+	  # if @picture[:url].blank? || @picture[:artist].blank? || @picture[:title].blank?
+	  # 	render :new
+	  if @picture.save  
 	    # if the save for the picture was successful, go to index.html.erb
 	    redirect_to pictures_url
 	  else

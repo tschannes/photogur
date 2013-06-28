@@ -21,7 +21,7 @@ $(document).ready(function() {
 	    $('img').each(function(index) {
 	        setTimeout(function(el) {
 	            el.fadeIn();
-	        }, index * 750, $(this));
+	        }, index * 500, $(this));
 	    });
 	    $('footer').fadeIn(5000);
 	});

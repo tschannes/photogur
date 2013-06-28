@@ -6,6 +6,8 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
+  gem 'annotate'
+  gem 'bcrypt-ruby'
 end
 
 # Use postgresSQL as the database for deployment
