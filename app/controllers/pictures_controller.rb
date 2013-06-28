@@ -1,7 +1,7 @@
 class PicturesController < ApplicationController
 
 	def index
-	    @pictures = Picture.all
+	    @pictures = Picture.all.shuffle
 	end
 	  
 	def new
@@ -12,7 +12,8 @@ class PicturesController < ApplicationController
 	  # Make the variable @picture a new picture with the given params
 	  params.permit!
 	  @picture = Picture.new(params[:picture])
-	  if @picture.save
+	 # && if params[:picture].empty? == false
+	  if @picture.save  
 	    # if the save for the picture was successful, go to index.html.erb
 	    redirect_to pictures_url
 	  else
