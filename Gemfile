@@ -13,6 +13,7 @@ end
 # Use postgresSQL as the database for deployment
 group :production do
   gem 'pg'
+  gem 'bcrypt-ruby'
 end
 
 # Use SCSS for stylesheets
