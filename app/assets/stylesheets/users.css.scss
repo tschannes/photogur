@@ -6,7 +6,7 @@ form{
 	width:50%;
 	margin-left:auto;
 	margin-right:auto;
-	padding:20px
+	padding:20px;
 }
 input{
 	width:100%;
@@ -17,11 +17,31 @@ input{
 	font-weight:100;
 	text-transform:lowercase;
 	&:focus, &:hover {
-	outline: -webkit-focus-ring-color auto 0px;
 	border:none;
 	background: #2e2e2d;
-
 	}
+	
+}
+.id{
+	float:margin;
+	img{
+		width:25%;
+		height:auto;
+	}
+}
+#error_explanation{
+	background:red;
+	margin:auto;
+	padding:20px;
+	margin-bottom:30px;
+	color:black;
+}
+#submit{
+	width:60%;
+	margin-top:30px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#202020;
 }
 @media (max-width: 800px) {
   form{
