@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>photography blog</title>
-  <nav>
-  	<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Roboto:100,300" %>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</nav>
-</head>
-<body>
-
-<%= yield %>
-	<footer>
-		<a href="http://www.github.com/tschannes" target="blank">made by tschannes</a>
-	</footer>
-</body>
+	<%= render 'layouts/header' %>
+	<body>
+		<%= yield %>
+		<%= render 'layouts/footer' %>
+		<%= debug(params) if Rails.env.development? %>
+	</body>
 </html>

@@ -1,3 +1,31 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+form{
+	border:1px dashed grey;
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:20px
+}
+input{
+	width:100%;
+	font-family: 'Roboto', sans-serif;
+	background:grey;
+	border:none;
+	color:white;
+	font-weight:100;
+	text-transform:lowercase;
+	&:focus, &:hover {
+	outline: -webkit-focus-ring-color auto 0px;
+	border:none;
+	background: #2e2e2d;
+
+	}
+}
+@media (max-width: 800px) {
+  form{
+  	width:90%;
+  }
+}
+
