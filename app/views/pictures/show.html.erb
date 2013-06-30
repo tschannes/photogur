@@ -1,5 +1,8 @@
 <nav>
-<%= link_to "Edit", edit_picture_path(@picture) %> | <%= link_to "Delete", @picture, :confirm => "Are you sure you want to delete this picture?", :method => :delete %>
+	<% if signed_in? %>
+		<%= link_to "Edit", edit_picture_path(@picture) %> | <%= link_to "Delete", @picture, :confirm => "Are you sure you want to delete this picture?", :method => :delete %>
+	<% end %>
+
 </nav>
 <legend><%= @picture[:title] %>, <%= @picture[:artist] %></legend>
 <div class="back">
