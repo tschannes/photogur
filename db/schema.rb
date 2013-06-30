@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130628220429) do
+ActiveRecord::Schema.define(version: 20130630162940) do
 
   create_table "pictures", force: true do |t|
     t.string   "artist"
