@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
 
-	def index
-		@users = User.all.sort_by_email
-	end
-
 	def new
 		@user = User.new
 	end
@@ -17,6 +13,10 @@ class UsersController < ApplicationController
 		else
 			render 'new'
 		end
+	end
+
+	def index
+		@users = User.all
 	end
 
 	def show

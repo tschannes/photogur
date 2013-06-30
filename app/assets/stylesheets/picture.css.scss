@@ -1,7 +1,10 @@
 ::-webkit-scrollbar { 
     display: none; 
 }
-
+#container{
+	clear:both;
+	margin-top:40px;
+}
 body{
 	background-color:black;
 	width:100%;
@@ -60,7 +63,8 @@ h1{
 	display:none;
 }
 nav{
-	margin-top:40px;
+	width:auto;
+	// float:left;
 }
 footer{
 	padding-top:30px;
