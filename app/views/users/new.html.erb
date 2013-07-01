@@ -8,7 +8,7 @@
 		<%= f.label :password %> <%= f.password_field :password %>
 		<%= f.label :password_confirmation, "Confirmation" %> 
 		<%= f.password_field :password_confirmation %>
-		<div id="submit"><%= f.submit "Create my account" %> </div>
+		<%= f.submit "Create my account", id: "submit" %>
 		<% end %> 
 	</div>
 

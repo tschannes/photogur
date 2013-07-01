@@ -3,10 +3,10 @@
 		<% if signed_in? %>
 			<%= link_to "home", "/" %> |
 			<%= link_to "New Picture", "/pictures/new" %> | 
-			<%= link_to "Logout", signout_path %> | 
+			<%= link_to "Logout", signout_path %>
 		<% else %>
 			<%= link_to "home", "/" %> | 
 			<%= link_to "Login", signin_path %> | 
-			<%= link_to "Subscribe", signup_path %>
+			<%= link_to "Sign up", signup_path %>
 		<% end %>
 	</nav>
