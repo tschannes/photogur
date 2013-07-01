@@ -18,18 +18,15 @@ $(document).ready(function() {
 
 	$(function() {
 		$('img, footer').hide();
-	    $('img').each(function(index) {
-	        setTimeout(function(el) {
-	            el.fadeIn();
-	        }, index * 500, $(this));
-	    });
-	    $('footer').fadeIn(5000);
+		$('img').each(function(index) {
+			setTimeout(function(el) {
+				el.fadeIn();
+			}, index * 500, $(this));
+		});
+		$('footer').fadeIn(5000);
 	});
 
-	$("img, legend").mouseenter(function() {
-		$(this).parents().children('legend').css("opacity", "1");
-	});
-	$("img, legend").mouseout(function() {
-		$(this).parents().children('legend').css("opacity", "0");
+	$("img, legend").hover(function() {
+		$(this).parents().children('legend').toggleClass("active");
 	});
 })
