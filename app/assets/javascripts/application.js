@@ -25,7 +25,6 @@ $(document).ready(function() {
 		});
 		$('footer').fadeIn(5000);
 	});
-
 	$("img, legend").hover(function() {
 		$(this).parents().children('legend').toggleClass("active");
 	});
