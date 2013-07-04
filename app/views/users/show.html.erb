@@ -3,6 +3,8 @@
 	<%= gravatar_for @user %>
 	<p>
 	<%= @user.name %></br>
-	<%= @user.email %>
+	<%= @user.email %></br>
+	<% if current_user.admin? && !current_user?(user) %>
+ 	<%= link_to "delete", user, method: :delete, confirm: "You sure?" %> <% end %>
 	</p>
 </div>
