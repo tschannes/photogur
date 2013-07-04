@@ -37,10 +37,16 @@ body{
 img{
 	width:100%;
 	height:auto;
+	opacity:0.7;
+	webkit-transition:all;
+}
+img:hover{
+	opacity:1;
 }
 legend{
 	opacity:0
 	}
+
 .active{
 	opacity:1;
 	color:white;

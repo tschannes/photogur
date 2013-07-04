@@ -14,18 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$(document).ready(function() {
 
-	$(function() {
-		$('img, footer').hide();
-		$('img').each(function(index) {
-			setTimeout(function(el) {
-				el.fadeIn();
-			}, index * 500, $(this));
-		});
-		$('footer').fadeIn(5000);
+function initialize() {
+	$('img, footer').hide();
+	$('img').each(function(index) {
+		setTimeout(function(el) {
+			el.fadeIn();
+		}, index * 500, $(this));
 	});
+	$('footer').fadeIn(5000);
+
 	$("img, legend").hover(function() {
 		$(this).parents().children('legend').toggleClass("active");
 	});
-})
+}
+$(document).ready(initialize);
+$(document).on('page:load', initialize);
