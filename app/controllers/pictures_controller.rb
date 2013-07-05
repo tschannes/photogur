@@ -3,6 +3,7 @@ class PicturesController < ApplicationController
 	
 	def index
 	    @pictures = Picture.all.shuffle
+	    @post = current_user.posts.build if signed_in?
 	end
 	  
 	def new
@@ -47,5 +48,9 @@ class PicturesController < ApplicationController
 	  @picture.destroy
 	  redirect_to pictures_url
 	end
+
+	# def home 
+	# 	@post = current_user.posts.build if signed_in?
+	# end
 
 end

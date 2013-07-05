@@ -1,6 +1,15 @@
-<% @pictures.each do |picture| %>
-  <div class="front">
-  <legend><%= picture[:title] %>,</br> <%= picture[:artist] %></legend>
-  	<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
-  </div>
+<% if signed_in? %>
+	<div class="row"> 
+		<aside class="span4">
+			<section> <%= render 'shared/user_info' %></section> 
+			<section><%= render 'shared/post_form' %> </section>
+		</aside> 
+	</div>
+<% else %>
+	<% @pictures.each do |picture| %>
+	  <div class="front">
+	  <legend><%= picture[:title] %>,</br> <%= picture[:artist] %></legend>
+	  	<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+	  </div>
+	<% end %>
 <% end %>

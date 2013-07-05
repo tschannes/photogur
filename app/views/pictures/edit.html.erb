@@ -5,6 +5,7 @@
 </nav>
 
 <%= form_for @picture do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
   <p>
     <%= f.label "artist" %><br>
     <%= f.text_field "artist" %>

@@ -27,6 +27,9 @@ function initialize() {
 	$("img, legend").hover(function() {
 		$(this).parents().children('legend').toggleClass("active");
 	});
+	$("img").on("click", function(){
+		$(".front").css('width', '100%');
+	})
 }
 $(document).ready(initialize);
 $(document).on('page:load', initialize);

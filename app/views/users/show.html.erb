@@ -3,8 +3,16 @@
 	<%= gravatar_for @user %>
 	<p>
 	<%= @user.name %></br>
-	<%= @user.email %></br>
+	<%= @user["email"] %></br>
 	<% if current_user.admin? && !current_user?(user) %>
  	<%= link_to "delete", user, method: :delete, confirm: "You sure?" %> <% end %>
 	</p>
+	<div class="span8">
+		<% if @user.posts.any? %> 
+		<h3>Posts (<%= @user.posts.count %>)</h3> 
+		<ol class="posts">
+		<%= render @posts %> </ol>
+		# <%= will_paginate @posts %> 
+		<% end %>
+	</div>
 </div>

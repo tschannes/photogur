@@ -15,6 +15,7 @@
 class User < ActiveRecord::Base
 	
 	has_secure_password
+	has_many :posts, dependent: :destroy
 	# attr_accessible :name, :email, :password, :password_confirmation, :remember_token
 	
 	before_save { |user| user.email = email.downcase }
@@ -27,8 +28,18 @@ class User < ActiveRecord::Base
 	validates :password, presence: true, length: { minimum: 6 }
 	validates :password_confirmation, presence: true
 	
+	def admin?
+  		@current_user && @current_user["email"] == @current_user["email"]
+	end
+
 	private
 	def create_remember_token 
 		self.remember_token = SecureRandom.urlsafe_base64
+	end
+
+	
+
+	def admin_user 
+		redirect_to(root_path) unless current_user.admin?
 	end
 end
